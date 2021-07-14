@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
+import { CogIcon, SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Link from "../../components/Link/Link";
-import Skeleton from "../../components/Skeleton/Skeleton";
 import Button from "../../components/Button/Button";
 import IconButton from "../../components/Button/IconButton";
 import MenuButton from "./MenuButton";
@@ -23,19 +22,6 @@ const Container = styled.div`
   padding: 8px 4px;
   background-color: ${({ theme }) => theme.nav.background};
   border-top: solid 2px rgba(133, 133, 133, 0.1);
-`;
-
-const PriceLink = styled.a`
-  display: flex;
-  align-items: center;
-  svg {
-    transition: transform 0.3s;
-  }
-  :hover {
-    svg {
-      transform: scale(1.2);
-    }
-  }
 `;
 
 const SettingsEntry = styled.div`
@@ -78,14 +64,6 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        {cakePriceUsd ? (
-          <PriceLink href={priceLink} target="_blank">
-            <PancakeRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24} />
-        )}
         <Flex>
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];

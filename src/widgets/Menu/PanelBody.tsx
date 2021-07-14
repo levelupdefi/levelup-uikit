@@ -16,7 +16,6 @@ const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;

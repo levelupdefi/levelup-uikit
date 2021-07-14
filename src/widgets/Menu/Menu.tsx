@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
+import { PancakeRoundIcon } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
+import Text from "../../components/Text/Text";
+import Skeleton from "../../components/Skeleton/Skeleton";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./Logo";
 import Panel from "./Panel";
@@ -12,25 +15,17 @@ import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config
 import Avatar from "./Avatar";
 
 const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
+  max-width: 1280px;
+  margin: auto;
 `;
 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
-  position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  left: 0;
+  padding: 20px 5px;
   transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
   width: 100%;
-  height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
 
@@ -55,6 +50,19 @@ const MobileOnlyOverlay = styled(Overlay)`
 
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
+  }
+`;
+
+const PriceLink = styled.a`
+  display: flex;
+  align-items: center;
+  svg {
+    transition: transform 0.3s;
+  }
+  :hover {
+    svg {
+      transform: scale(1.2);
+    }
   }
 `;
 
@@ -121,25 +129,33 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
+          {cakePriceUsd ? (
+            <PriceLink href={priceLink} target="_blank">
+              <PancakeRoundIcon width="24px" mr="8px" />
+              <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+            </PriceLink>
+          ) : (
+            <Skeleton width={80} height={24} />
+          )}
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
         </Flex>
       </StyledNav>
+      <Panel
+        isPushed={isPushed}
+        isMobile={isMobile}
+        showMenu={showMenu}
+        isDark={isDark}
+        toggleTheme={toggleTheme}
+        langs={langs}
+        setLang={setLang}
+        currentLang={currentLang}
+        cakePriceUsd={cakePriceUsd}
+        pushNav={setIsPushed}
+        links={links}
+        priceLink={priceLink}
+      />
       <BodyWrapper>
-        <Panel
-          isPushed={isPushed}
-          isMobile={isMobile}
-          showMenu={showMenu}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-          priceLink={priceLink}
-        />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>

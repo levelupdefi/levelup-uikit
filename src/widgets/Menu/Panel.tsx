@@ -21,6 +21,7 @@ const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 const StyledPanel = styled.div`
   padding: 5px 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   flex-shrink: 0;
   border-radius: 15px 15px 0 0;

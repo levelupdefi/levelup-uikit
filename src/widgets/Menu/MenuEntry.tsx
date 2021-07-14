@@ -31,18 +31,19 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  border-bottom: ${({ isActive, theme }) => (isActive ? `2px solid ${theme.colors.primary}` : "none")};
 
   a {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
+    color: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
+    font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.textSubtle};
+    fill: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
   }
 
   &:hover {

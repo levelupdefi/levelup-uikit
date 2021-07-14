@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import throttle from "lodash/throttle";
+import { darken } from 'polished'
 import Overlay from "../../components/Overlay/Overlay";
 import { PancakeRoundIcon } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
@@ -48,6 +48,22 @@ const MobileOnlyOverlay = styled(Overlay)`
     display: none;
   }
 `;
+
+const PriceLinkWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textSubtle};
+  padding: 6px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: ${({ theme }) => darken(0.05, theme.colors.primary)};
+  }
+`
 
 const PriceLink = styled.a`
   display: flex;
@@ -125,16 +141,18 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
-          {cakePriceUsd ? (
-            <PriceLink href={priceLink} target="_blank">
-              <PancakeRoundIcon width="24px" mr="8px" />
-              <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-            </PriceLink>
-          ) : (
-            <Skeleton width={80} height={24} />
-          )}
+          <PriceLinkWrapper>
+            {cakePriceUsd ? (
+              <PriceLink href={priceLink} target="_blank">
+                <PancakeRoundIcon width="24px" mr="8px" />
+                <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+              </PriceLink>
+            ) : (
+              <Skeleton width={80} height={24} />
+            )}
+          </PriceLinkWrapper>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+          {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
       </StyledNav>
       <Panel

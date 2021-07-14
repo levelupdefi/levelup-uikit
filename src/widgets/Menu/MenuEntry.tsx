@@ -39,7 +39,10 @@ const MenuEntry = styled.div<Props>`
     width: 100%;
     height: 100%;
     color: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
-    font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
+
+    div {
+      font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
+    }
   }
 
   svg {
@@ -47,7 +50,7 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    border-bottom: ${({ theme }) => (`2px solid ${theme.colors.textSubtle}`)};
   }
 
   // Safari fix

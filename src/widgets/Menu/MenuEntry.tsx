@@ -31,26 +31,27 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  border-bottom: ${({ isActive, theme }) => (isActive ? `2px solid ${theme.colors.primary}` : "none")};
+  border-bottom: ${({ isActive, theme }) => (isActive ? `2px solid #c10015` : "none")};
 
   a {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-    color: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
+    color: ${({ isActive, theme }) => isActive ? `#c10015` : `#1b1464`};
   }
 
   div {
     font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
+    color: ${({ isActive, theme }) => isActive ? `#c10015` : `#1b1464`};
   }
-  
+
   svg {
-    fill: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
+    fill: ${({ isActive, theme }) => isActive ? `#c10015` : `#1b1464`};
   }
 
   &:hover {
-    border-bottom: ${({ theme }) => (`2px solid ${theme.colors.textSubtle}`)};
+    background-color: #F8AF11;
   }
 
   // Safari fix

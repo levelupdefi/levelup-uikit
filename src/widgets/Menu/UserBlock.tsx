@@ -21,6 +21,7 @@ const StyledButton = styled.div`
   font-size: 16px;
   border-radius: 6px;
   margin-left: 20px;
+  cursor: pointer;
 
   &:hover {
     background-color: ${({ theme }) => darken(0.05, theme.colors.primary)};

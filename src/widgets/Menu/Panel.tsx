@@ -81,7 +81,7 @@ const Panel: React.FC<Props> = (props) => {
           const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
           const mr = index < socials.length - 1 ? "8px" : 0;
           return (
-            <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
+            <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr} color="#1b1464">
               <Icon {...iconProps} />
             </Link>
           );

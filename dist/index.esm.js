@@ -1874,8 +1874,8 @@ var Icon$P = function (props) {
 
 var Logo = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 240 74" }, props),
-        React.createElement("image", { width: "240", height: "74", href: isDark ? '/images/egg/LogoTextNewDark.png' : '/images/egg/LogoTextNewWhite.png' })));
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 480 165" }, props),
+        React.createElement("image", { width: "480", height: "165", href: isDark ? '/images/egg/LogoTextNewDark.png' : '/images/egg/LogoTextNewWhite.png' })));
 };
 
 var Icon$Q = function (props) {
@@ -2065,7 +2065,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     EggHouseIcon: Icon$15
 });
 
-var StyledLink$1 = styled(Link$1)(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 120px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 120px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 120px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 120px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
+var StyledLink$1 = styled(Link$1)(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 160px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 160px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -2289,7 +2289,7 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-var StyledPanel = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  padding: 1px 20px 0 0;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 15px 15px 0 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n"], ["\n  padding: 1px 20px 0 0;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 15px 15px 0 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledPanel = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  padding: 1px 20px 0 10px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 15px 15px 0 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n"], ["\n  padding: 1px 20px 0 10px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 15px 15px 0 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
 });
@@ -2315,9 +2315,9 @@ var Panel = function (props) {
         })),
         React.createElement(Flex, { flex: "1", justifyContent: "flex-end" }, socials.map(function (social, index) {
             var Icon = Icons[social.icon];
-            var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
+            var iconProps = { width: "24px", color: "#1b1464", style: { cursor: "pointer" } };
             var mr = index < socials.length - 1 ? "8px" : 0;
-            return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr, color: "#1b1464" },
+            return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
                 React.createElement(Icon, __assign({}, iconProps))));
         }))));
 };
@@ -2508,12 +2508,9 @@ var useWalletModal = function (login, logout, account) {
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
-var StyledButton$1 = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: ", ";\n  color: ", ";\n  padding: 6px 12px;\n  font-size: 16px;\n  border-radius: 6px;\n  margin-left: 20px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: ", ";\n  }\n"], ["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: ", ";\n  color: ", ";\n  padding: 6px 12px;\n  font-size: 16px;\n  border-radius: 6px;\n  margin-left: 20px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: ", ";\n  }\n"])), function (_a) {
+var StyledButton$1 = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: ", ";\n  color: #1b1464;\n  padding: 6px 12px;\n  font-size: 16px;\n  border-radius: 6px;\n  margin-left: 20px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: ", ";\n  }\n"], ["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: ", ";\n  color: #1b1464;\n  padding: 6px 12px;\n  font-size: 16px;\n  border-radius: 6px;\n  margin-left: 20px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.textSubtle;
 }, function (_a) {
     var theme = _a.theme;
     return darken(0.05, theme.colors.primary);
@@ -2590,7 +2587,7 @@ var Menu = function (_a) {
             React.createElement(Flex, null,
                 React.createElement(PriceLinkWrapper, null, cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                     React.createElement(Icon$v, { width: "24px", mr: "8px" }),
-                    React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
+                    React.createElement(Text, { color: "#1b1464" }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }))),
         React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
         React.createElement(BodyWrapper, null,
@@ -2722,7 +2719,7 @@ var light$1 = (_a$2 = {},
         borderColorHover: "currentColor",
         boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
         boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-        color: "#FFFFFF",
+        color: "#1b1464",
     },
     _a$2[SECONDARY] = {
         background: "transparent",

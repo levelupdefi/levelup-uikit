@@ -145,7 +145,7 @@ const Menu: React.FC<NavProps> = ({
             {cakePriceUsd ? (
               <PriceLink href={priceLink} target="_blank">
                 <PancakeRoundIcon width="24px" mr="8px" />
-                <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+                <Text color="#1b1464">{`$${cakePriceUsd.toFixed(3)}`}</Text>
               </PriceLink>
             ) : (
               <Skeleton width={80} height={24} />

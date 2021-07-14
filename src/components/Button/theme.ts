@@ -12,7 +12,7 @@ export const light: ButtonTheme = {
     borderColorHover: "currentColor",
     boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
     boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-    color: "#FFFFFF",
+    color: "#1b1464",
   },
   [SECONDARY]: {
     background: "transparent",

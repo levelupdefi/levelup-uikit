@@ -16,7 +16,7 @@ const StyledButton = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: #1b1464;
   padding: 6px 12px;
   font-size: 16px;
   border-radius: 6px;

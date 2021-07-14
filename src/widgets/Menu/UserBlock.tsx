@@ -18,7 +18,7 @@ const StyledButton = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textSubtle};
   padding: 6px 12px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 6px;
   margin-left: 20px;
 

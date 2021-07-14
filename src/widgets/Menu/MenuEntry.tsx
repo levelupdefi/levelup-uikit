@@ -39,12 +39,12 @@ const MenuEntry = styled.div<Props>`
     width: 100%;
     height: 100%;
     color: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
-
-    div {
-      font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
-    }
   }
 
+  div {
+    font-weight: ${({ isActive }) => isActive ? "bold" : "normal"};
+  }
+  
   svg {
     fill: ${({ isActive, theme }) => isActive ? theme.colors.primary : theme.colors.textSubtle};
   }

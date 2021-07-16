@@ -2338,7 +2338,7 @@ var Panel = function (props) {
             }
             return (
             // <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
-            React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href !== undefined && location.pathname.includes(entry.href), className: calloutClass },
+            React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname || entry.href !== undefined && location.pathname.includes(entry.href + "/"), className: calloutClass },
                 React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },
                     iconElement,
                     React__default['default'].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));

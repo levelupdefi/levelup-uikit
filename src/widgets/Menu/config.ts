@@ -117,12 +117,12 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: ""
+    href: "http://t.me/levelupfinancegroup"
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "",
+    href: "https://twitter.com/levelupdefi",
   },
   // {
   //   label: "Reddit",

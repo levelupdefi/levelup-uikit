@@ -2052,6 +2052,12 @@ var Referral = function (_a) {
         React__default['default'].createElement("image", { width: "48", height: "48", href: isDark ? '/images/egg/referral.png' : '/images/egg/referral.png' })));
 };
 
+var Doc = function (_a) {
+    var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 64 64" }, props),
+        React__default['default'].createElement("image", { width: "64", height: "64", href: isDark ? '/images/egg/doc.png' : '/images/egg/doc.png' })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$I,
@@ -2081,7 +2087,8 @@ var IconModule = /*#__PURE__*/Object.freeze({
     BondsIcon: Icon$13,
     VaultsIcon: Icon$14,
     EggHouseIcon: Icon$15,
-    ReferralIcon: Referral
+    ReferralIcon: Referral,
+    DocIcon: Doc
 });
 
 var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 160px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 160px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
@@ -2219,12 +2226,12 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: ""
+        href: "http://t.me/levelupfinancegroup"
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "",
+        href: "https://twitter.com/levelupdefi",
     },
 ];
 var MENU_ENTRY_HEIGHT = 48;

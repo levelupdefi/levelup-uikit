@@ -26,3 +26,4 @@ export { default as BondsIcon } from "./Bonds";
 export { default as VaultsIcon } from "./Vaults";
 export { default as EggHouseIcon } from "./EggHouse";
 export { default as ReferralIcon } from "./Referral";
+export { default as DocIcon } from "./Doc";

@@ -37,8 +37,6 @@ const Panel: React.FC<Props> = (props) => {
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
 
-  console.log("location.pathname = ", location.pathname, location.search)
-
   return (
     <StyledPanel>
       <Flex>
@@ -69,7 +67,8 @@ const Panel: React.FC<Props> = (props) => {
             );
           }
           return (
-            <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+            // <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+            <MenuEntry key={entry.label} isActive={entry.href !== undefined && location.pathname.includes(entry.href)} className={calloutClass}>
               <MenuLink href={entry.href} onClick={handleClick}>
                 {iconElement}
                 <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>

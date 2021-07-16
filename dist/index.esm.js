@@ -2312,7 +2312,6 @@ var Panel = function (props) {
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    console.log("location.pathname = ", location.pathname, location.search);
     return (React.createElement(StyledPanel, null,
         React.createElement(Flex, null, links.map(function (entry) {
             var Icon = Icons[entry.icon];
@@ -2325,7 +2324,9 @@ var Panel = function (props) {
                     React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: location.pathname.includes(item.href), onClick: handleClick },
                         React.createElement(MenuLink, { href: item.href }, item.label))); })));
             }
-            return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
+            return (
+            // <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+            React.createElement(MenuEntry, { key: entry.label, isActive: entry.href !== undefined && location.pathname.includes(entry.href), className: calloutClass },
                 React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
                     iconElement,
                     React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));

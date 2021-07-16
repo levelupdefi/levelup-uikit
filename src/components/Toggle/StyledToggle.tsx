@@ -23,6 +23,7 @@ export const Input = styled.input`
 
   &:checked + ${Handle} {
     left: calc(100% - 22px);
+    background-color: #423308;
   }
 
   &:focus + ${Handle} {

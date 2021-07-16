@@ -6,7 +6,7 @@ export const baseColors = {
   primaryBright: "#ffbc00",
   primaryDark: "#ffbc00",
   secondary: "#7645D9",
-  success: "#31D0AA",
+  success: "#ffbc00",
   warning: "#FFB237",
 };
 
@@ -41,7 +41,7 @@ export const darkColors: Colors = {
   backgroundDisabled: "#3c3742",
   contrast: "#FFFFFF",
   invertedContrast: "#191326",
-  input: "#483f5a",
+  input: "#1d2c47",
   primaryDark: "#0098A1",
   tertiary: "#353547",
   text: "#EAE2FC",

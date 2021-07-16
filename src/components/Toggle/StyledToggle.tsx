@@ -4,12 +4,12 @@ export const Handle = styled.div`
   background-color: ${({ theme }) => theme.toggle.handleBackground};
   border-radius: 50%;
   cursor: pointer;
-  height: 32px;
-  left: 4px;
+  height: 20px;
+  left: 1px;
   position: absolute;
-  top: 4px;
+  top: 1px;
   transition: left 200ms ease-in;
-  width: 32px;
+  width: 20px;
   z-index: 1;
 `;
 
@@ -22,7 +22,7 @@ export const Input = styled.input`
   z-index: 3;
 
   &:checked + ${Handle} {
-    left: calc(100% - 36px);
+    left: calc(100% - 24px);
   }
 
   &:focus + ${Handle} {
@@ -41,7 +41,7 @@ const StyledToggle = styled.div<{ checked: boolean }>`
   box-shadow: ${({ theme }) => theme.shadows.inset};
   cursor: pointer;
   display: inline-flex;
-  height: 40px;
+  height: 22px;
   position: relative;
   transition: background-color 200ms;
   width: 72px;

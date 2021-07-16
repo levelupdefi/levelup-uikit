@@ -58,7 +58,8 @@ const Panel: React.FC<Props> = (props) => {
               >
                 {isPushed &&
                   entry.items.map((item) => (
-                    <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                    // <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                    <MenuEntry key={item.href} secondary isActive={location.pathname.includes(item.href)} onClick={handleClick}>
                       <MenuLink href={item.href}>{item.label}</MenuLink>
                     </MenuEntry>
                   ))}

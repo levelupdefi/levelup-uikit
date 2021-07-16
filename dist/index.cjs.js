@@ -2331,7 +2331,9 @@ var Panel = function (props) {
             var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
             if (entry.items) {
                 return (React__default['default'].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
-                    entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
+                    entry.items.map(function (item) { return (
+                    // <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                    React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: location.pathname.includes(item.href), onClick: handleClick },
                         React__default['default'].createElement(MenuLink, { href: item.href }, item.label))); })));
             }
             return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },

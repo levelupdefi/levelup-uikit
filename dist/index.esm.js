@@ -2312,6 +2312,7 @@ var Panel = function (props) {
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
+    console.log("location.pathname = ", location.pathname, location.search);
     return (React.createElement(StyledPanel, null,
         React.createElement(Flex, null, links.map(function (entry) {
             var Icon = Icons[entry.icon];

@@ -37,6 +37,8 @@ const Panel: React.FC<Props> = (props) => {
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
 
+  console.log("location.pathname = ", location.pathname, location.search)
+
   return (
     <StyledPanel>
       <Flex>

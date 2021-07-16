@@ -22,7 +22,7 @@ export const Input = styled.input`
   z-index: 3;
 
   &:checked + ${Handle} {
-    left: calc(100% - 24px);
+    left: calc(100% - 22px);
   }
 
   &:focus + ${Handle} {

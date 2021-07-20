@@ -35,6 +35,7 @@ const MenuEntry = styled.div<Props>`
 
   a {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -63,6 +64,12 @@ const MenuEntry = styled.div<Props>`
     background: ${({ theme }) => theme.colors.gradients.bubblegum};
     background-size: 200% 100%;
     font-weight: bold;
+  }
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    a {
+      flex-direction: row;
+    }
   }
 `;
 MenuEntry.defaultProps = {

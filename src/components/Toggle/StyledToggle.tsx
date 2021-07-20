@@ -5,7 +5,7 @@ export const Handle = styled.div`
   border-radius: 50%;
   cursor: pointer;
   height: 20px;
-  left: 1px;
+  left: 2px;
   position: absolute;
   top: 1px;
   transition: left 200ms ease-in;

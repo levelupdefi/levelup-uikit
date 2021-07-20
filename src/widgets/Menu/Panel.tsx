@@ -24,11 +24,15 @@ const StyledPanel = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-shrink: 0;
-  border-radius: 15px 15px 0 0;
+  border-radius: 0;
   background-color: ${({ theme }) => theme.nav.background};
   transition: padding-top 0.2s, width 0.2s;
   overflow: initial;
   transform: translate3d(0, 0, 0);
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    border-radius: 15px 15px 0 0;
+  }
 `;
 
 const Panel: React.FC<Props> = (props) => {

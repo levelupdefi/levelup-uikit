@@ -27,7 +27,7 @@ const MenuEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: ${MENU_ENTRY_HEIGHT}px;
+  height: 40px;
   padding: 0 5px;
   font-size: 12px;
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
@@ -66,10 +66,13 @@ const MenuEntry = styled.div<Props>`
     font-weight: bold;
   }
 
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.sm} {
     font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
     padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
+    height: ${MENU_ENTRY_HEIGHT}px;
+  }
 
+  ${({ theme }) => theme.mediaQueries.md} {
     a {
       flex-direction: row;
     }

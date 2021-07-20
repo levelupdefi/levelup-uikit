@@ -2229,7 +2229,7 @@ var LinkLabel = styled.div(templateObject_2$a || (templateObject_2$a = __makeTem
     var isPushed = _a.isPushed, theme = _a.theme;
     return (isPushed ? theme.colors.textSubtle : "transparent");
 });
-var MenuEntry = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n\n    a {\n      flex-direction: row;\n    }\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n\n    a {\n      flex-direction: row;\n    }\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
+var MenuEntry = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n    height: ", "px;\n  }\n\n  ", " {\n    a {\n      flex-direction: row;\n    }\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n    height: ", "px;\n  }\n\n  ", " {\n    a {\n      flex-direction: row;\n    }\n  }\n"])), function (_a) {
     var secondary = _a.secondary, theme = _a.theme;
     return (secondary ? theme.colors.background : "transparent");
 }, function (_a) {
@@ -2252,13 +2252,16 @@ var MenuEntry = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTem
     return theme.colors.gradients.bubblegum;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.mediaQueries.md;
+    return theme.mediaQueries.sm;
 }, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "14px" : "16px");
 }, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
+}, MENU_ENTRY_HEIGHT, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.md;
 });
 MenuEntry.defaultProps = {
     secondary: false,
@@ -2306,7 +2309,7 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-var StyledPanel = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  padding: 1px 20px 0 10px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-radius: 15px 15px 0 0;\n  }\n"], ["\n  padding: 1px 20px 0 10px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-radius: 15px 15px 0 0;\n  }\n"])), function (_a) {
+var StyledPanel = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  padding: 5px 8px 0 5px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-radius: 15px 15px 0 0;\n    padding: 1px 20px 0 10px;\n  }\n"], ["\n  padding: 5px 8px 0 5px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex-shrink: 0;\n  border-radius: 0;\n  background-color: ", ";\n  transition: padding-top 0.2s, width 0.2s;\n  overflow: initial;\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-radius: 15px 15px 0 0;\n    padding: 1px 20px 0 10px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
 }, function (_a) {

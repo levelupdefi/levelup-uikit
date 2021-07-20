@@ -19,7 +19,7 @@ interface Props extends PanelProps, PushedProps {
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 
 const StyledPanel = styled.div`
-  padding: 1px 20px 0 10px;
+  padding: 5px 8px 0 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -32,6 +32,7 @@ const StyledPanel = styled.div`
 
   ${({ theme }) => theme.mediaQueries.md} {
     border-radius: 15px 15px 0 0;
+    padding: 1px 20px 0 10px;
   }
 `;
 

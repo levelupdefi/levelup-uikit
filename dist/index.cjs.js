@@ -2241,7 +2241,7 @@ var LinkLabel = styled__default['default'].div(templateObject_2$a || (templateOb
     var isPushed = _a.isPushed, theme = _a.theme;
     return (isPushed ? theme.colors.textSubtle : "transparent");
 });
-var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n    height: ", "px;\n  }\n\n  ", " {\n    a {\n      flex-direction: row;\n    }\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: ", ";\n    height: ", "px;\n  }\n\n  ", " {\n    a {\n      flex-direction: row;\n    }\n  }\n"])), function (_a) {
+var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: 0 5px;\n    height: ", "px;\n  }\n\n  ", " {\n    padding: ", ";\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 5px;\n  font-size: 12px;\n  background-color: ", ";\n  border-bottom: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    color: ", ";\n  }\n\n  div {\n    font-weight: ", ";\n    color: ", ";\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: #F8AF11;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n\n  ", " {\n    font-size: ", ";\n    padding: 0 5px;\n    height: ", "px;\n  }\n\n  ", " {\n    padding: ", ";\n  }\n"])), function (_a) {
     var secondary = _a.secondary, theme = _a.theme;
     return (secondary ? theme.colors.background : "transparent");
 }, function (_a) {
@@ -2268,12 +2268,12 @@ var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateOb
 }, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "14px" : "16px");
-}, function (_a) {
-    var secondary = _a.secondary;
-    return (secondary ? "0 32px" : "0 16px");
 }, MENU_ENTRY_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
+}, function (_a) {
+    var secondary = _a.secondary;
+    return (secondary ? "0 32px" : "0 16px");
 });
 MenuEntry.defaultProps = {
     secondary: false,

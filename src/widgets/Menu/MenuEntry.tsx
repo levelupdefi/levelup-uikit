@@ -35,7 +35,6 @@ const MenuEntry = styled.div<Props>`
 
   a {
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -68,14 +67,12 @@ const MenuEntry = styled.div<Props>`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-    padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
+    padding: 0 5px;
     height: ${MENU_ENTRY_HEIGHT}px;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
-    a {
-      flex-direction: row;
-    }
+    padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   }
 `;
 MenuEntry.defaultProps = {

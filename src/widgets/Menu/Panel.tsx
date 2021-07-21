@@ -75,7 +75,7 @@ const Panel: React.FC<Props> = (props) => {
             // <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
             <MenuEntry key={entry.label} isActive={entry.href === location.pathname || entry.href !== undefined && location.pathname.includes(`${entry.href}/`)} className={calloutClass}>
               <MenuLink href={entry.href} onClick={handleClick}>
-                {iconElement}
+                {/* {iconElement} */}
                 <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
               </MenuLink>
             </MenuEntry>

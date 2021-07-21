@@ -2337,7 +2337,6 @@ var Panel = function (props) {
             // <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
             React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname || entry.href !== undefined && location.pathname.includes(entry.href + "/"), className: calloutClass },
                 React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
-                    iconElement,
                     React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
         })),
         React.createElement(Flex, { flex: "1", justifyContent: "flex-end" }, socials.map(function (social, index) {

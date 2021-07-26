@@ -2624,7 +2624,7 @@ var DesktopSlickWrapper = styled__default['default'].div(templateObject_8 || (te
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
-var MobileSlickWrapper = styled__default['default'].div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  max-width: 200px;\n  width: 200px;\n  display: block;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  max-width: 200px;\n  width: 200px;\n  display: block;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var MobileSlickWrapper = styled__default['default'].div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  max-width: 200px;\n  width: 200px;\n  display: block;\n  margin: auto;\n  margin-bottom: 10px;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  max-width: 200px;\n  width: 200px;\n  display: block;\n  margin: auto;\n  margin-bottom: 10px;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });

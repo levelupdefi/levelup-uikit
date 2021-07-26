@@ -98,6 +98,8 @@ const MobileSlickWrapper = styled.div`
   max-width: 200px;
   width: 200px;
   display: block;
+  margin: auto;
+  margin-bottom: 10px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     display: none;

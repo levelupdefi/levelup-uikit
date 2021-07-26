@@ -9,6 +9,9 @@ var get = require('lodash/get');
 var noop = require('lodash/noop');
 var debounce = require('lodash/debounce');
 var polished = require('polished');
+var Slider = require('react-slick');
+require('slick-carousel/slick/slick.css');
+require('slick-carousel/slick/slick-theme.css');
 var reactRouterDom = require('react-router-dom');
 var reactTransitionGroup = require('react-transition-group');
 
@@ -19,6 +22,7 @@ var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 var get__default = /*#__PURE__*/_interopDefaultLegacy(get);
 var noop__default = /*#__PURE__*/_interopDefaultLegacy(noop);
 var debounce__default = /*#__PURE__*/_interopDefaultLegacy(debounce);
+var Slider__default = /*#__PURE__*/_interopDefaultLegacy(Slider);
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -2653,9 +2657,24 @@ var Menu = function (_a) {
     // }, []);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
+    var settings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     return (React__default['default'].createElement(Wrapper$1, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
+            React__default['default'].createElement(Slider__default['default'], __assign({}, settings),
+                React__default['default'].createElement("div", null,
+                    React__default['default'].createElement("img", { src: "/images/slick/slick-1.png", alt: "slide 1" })),
+                React__default['default'].createElement("div", null,
+                    React__default['default'].createElement("img", { src: "/images/slick/slick-2.png", alt: "slide 2" })),
+                React__default['default'].createElement("div", null,
+                    React__default['default'].createElement("img", { src: "/images/slick/slick-3.png", alt: "slide 3" }))),
             React__default['default'].createElement(Flex, null,
                 React__default['default'].createElement(PriceLinkWrapper, null, cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
                     React__default['default'].createElement(Icon$w, { width: "24px", mr: "8px" }),

@@ -5,6 +5,9 @@ import get from 'lodash/get';
 import noop from 'lodash/noop';
 import debounce from 'lodash/debounce';
 import { darken } from 'polished';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -2641,9 +2644,24 @@ var Menu = function (_a) {
     // }, []);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
+    var settings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     return (React.createElement(Wrapper$1, null,
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
+            React.createElement(Slider, __assign({}, settings),
+                React.createElement("div", null,
+                    React.createElement("img", { src: "/images/slick/slick-1.png", alt: "slide 1" })),
+                React.createElement("div", null,
+                    React.createElement("img", { src: "/images/slick/slick-2.png", alt: "slide 2" })),
+                React.createElement("div", null,
+                    React.createElement("img", { src: "/images/slick/slick-3.png", alt: "slide 3" }))),
             React.createElement(Flex, null,
                 React.createElement(PriceLinkWrapper, null, cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                     React.createElement(Icon$w, { width: "24px", mr: "8px" }),

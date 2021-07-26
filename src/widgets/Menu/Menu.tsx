@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { darken } from 'polished'
+
+import Slider from "react-slick";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Overlay from "../../components/Overlay/Overlay";
 import { PancakeRoundIcon } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
@@ -131,6 +137,15 @@ const Menu: React.FC<NavProps> = ({
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu}>
@@ -140,6 +155,17 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
+        <Slider {...settings}>
+          <div>
+            <img src="/images/slick/slick-1.png" alt="slide 1" />
+          </div>
+          <div>
+            <img src="/images/slick/slick-2.png" alt="slide 2" />
+          </div>
+          <div>
+            <img src="/images/slick/slick-3.png" alt="slide 3" />
+          </div>
+        </Slider>
         <Flex>
           <PriceLinkWrapper>
             {cakePriceUsd ? (

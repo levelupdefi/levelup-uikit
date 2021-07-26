@@ -56,7 +56,9 @@
         "react-dom": "^17.0.1",
         "react-is": "^17.0.1",
         "react-router-dom": "^5.2.0",
+        "react-slick": "^0.28.1",
         "rollup": "^2.38.4",
+        "slick-carousel": "^1.8.1",
         "styled-components": "^5.2.0",
         "themeprovider-storybook": "^1.6.4",
         "ts-jest": "^26.5.0",
@@ -71,6 +73,7 @@
     },
     "dependencies": {
         "@types/lodash": "^4.14.162",
+        "@types/react-slick": "^0.23.5",
         "@types/styled-system": "^5.1.10",
         "lodash": "^4.17.20",
         "polished": "^4.1.3",

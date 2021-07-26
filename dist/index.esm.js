@@ -2648,9 +2648,11 @@ var Menu = function (_a) {
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     var settings = {
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
-        speed: 500,
+        // speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1
     };

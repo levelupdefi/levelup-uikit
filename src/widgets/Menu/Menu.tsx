@@ -84,6 +84,16 @@ const PriceLink = styled.a`
   }
 `;
 
+const SlickWrapper = styled.div`
+  max-width: 200px;
+  width: 200px;
+`;
+
+const SlickImage = styled.img`
+  max-width: 200px;
+  height: auto;
+`;
+
 const Menu: React.FC<NavProps> = ({
   account,
   login,
@@ -155,17 +165,19 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <Slider {...settings}>
-          <div>
-            <img src="/images/slick/slick-1.png" alt="slide 1" />
-          </div>
-          <div>
-            <img src="/images/slick/slick-2.png" alt="slide 2" />
-          </div>
-          <div>
-            <img src="/images/slick/slick-3.png" alt="slide 3" />
-          </div>
-        </Slider>
+        <SlickWrapper>
+          <Slider {...settings}>
+            <div>
+              <SlickImage src="/images/slick/slick-1.png" alt="slide 1" />
+            </div>
+            <div>
+              <SlickImage src="/images/slick/slick-2.png" alt="slide 2" />
+            </div>
+            <div>
+              <SlickImage src="/images/slick/slick-3.png" alt="slide 3" />
+            </div>
+          </Slider>
+        </SlickWrapper>
         <Flex>
           <PriceLinkWrapper>
             {cakePriceUsd ? (

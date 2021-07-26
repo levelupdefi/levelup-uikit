@@ -84,9 +84,24 @@ const PriceLink = styled.a`
   }
 `;
 
-const SlickWrapper = styled.div`
+const DesktopSlickWrapper = styled.div`
+  max-width: 200px;
+  display: none;
+  width: 200px;
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    display: block;
+  }
+`;
+
+const MobileSlickWrapper = styled.div`
   max-width: 200px;
   width: 200px;
+  display: block;
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    display: none;
+  }
 `;
 
 const SlickImage = styled.img`
@@ -149,7 +164,7 @@ const Menu: React.FC<NavProps> = ({
 
   const settings = {
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     // speed: 500,
     autoplay: true,
@@ -167,7 +182,7 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <SlickWrapper>
+        <DesktopSlickWrapper>
           <Slider {...settings}>
             <div>
               <SlickImage src="/images/slick/slick-1.png" alt="slide 1" />
@@ -179,7 +194,7 @@ const Menu: React.FC<NavProps> = ({
               <SlickImage src="/images/slick/slick-3.png" alt="slide 3" />
             </div>
           </Slider>
-        </SlickWrapper>
+        </DesktopSlickWrapper>
         <Flex>
           <PriceLinkWrapper>
             {cakePriceUsd ? (
@@ -195,6 +210,19 @@ const Menu: React.FC<NavProps> = ({
           {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
       </StyledNav>
+      <MobileSlickWrapper>
+          <Slider {...settings}>
+            <div>
+              <SlickImage src="/images/slick/slick-1.png" alt="slide 1" />
+            </div>
+            <div>
+              <SlickImage src="/images/slick/slick-2.png" alt="slide 2" />
+            </div>
+            <div>
+              <SlickImage src="/images/slick/slick-3.png" alt="slide 3" />
+            </div>
+          </Slider>
+        </MobileSlickWrapper>
       <Panel
         isPushed={isPushed}
         isMobile={isMobile}
